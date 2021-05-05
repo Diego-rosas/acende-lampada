@@ -23,11 +23,18 @@ var btnDesliga = document.getElementById("btn-desl");
   
 //declara os eventos dos botoes
 btnLiga.addEventListener('click', function(){
+     document.getElementById('status').innerHTML = "LIGADA";
+
+    //var lampadaLigada = engine.hexadecimais['ligado'];
+    //statusLampada.innerHTML = lampadaLigada.toUpperCase();
+
     audioLiga.play();
     acendeLampada(lampadaLigada);
 })
 
 btnDesliga.addEventListener('click', function(){
+    document.getElementById('status').innerHTML = "DESLIGADA";
+
     audioDesliga.play();
     acendeLampada(lampadaDesligada);
 })

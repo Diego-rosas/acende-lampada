@@ -28,8 +28,9 @@ section#corpo div#caixa-lampada{
 
 
 section#corpo h3#status{
-    margin-bottom: 10px;
-    font-size: 30px;
+    margin-bottom: 0px;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
