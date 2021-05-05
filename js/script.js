@@ -23,21 +23,22 @@ var btnDesliga = document.getElementById("btn-desl");
   
 //declara os eventos dos botoes
 btnLiga.addEventListener('click', function(){
-     document.getElementById('status').innerHTML = "LIGADA";
+//document.getElementById('status').innerHTML = "LIGADA";
 
     //var lampadaLigada = engine.hexadecimais['ligado'];
     //statusLampada.innerHTML = lampadaLigada.toUpperCase();
 
-    audioLiga.play();
+   // audioLiga.play();
     acendeLampada(lampadaLigada);
-})
+});
 
 btnDesliga.addEventListener('click', function(){
-    document.getElementById('status').innerHTML = "DESLIGADA";
+  //  document.getElementById('status').innerHTML = "DESLIGADA";
 
-    audioDesliga.play();
+   // audioDesliga.play();
     acendeLampada(lampadaDesligada);
-})
+});
+
 
 
 //função para acender a lampada
@@ -45,7 +46,19 @@ function acendeLampada(estadoDalampada) {
     var corDaLampada = document.getElementById('lampada');
 
     corDaLampada.style.backgroundColor = estadoDalampada;
+    
+    if(estadoDalampada == '#E7D703'){
+        document.getElementById('status').innerHTML = "LIGADA";
+        audioLiga.play();
+        var i = true;
+    } else {
+        document.getElementById('status').innerHTML = "DESLIGADA";
+        audioDesliga.play();
+    }
+    
+        
 }
+
 
 
 
